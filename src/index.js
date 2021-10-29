@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import DisplayChoice from './components/DisplayChoice';
+import Header from './components/Header';
+import ChoiceMaker from "./components/ChoiceMaker";
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <div className="container">
+      <ChoiceMaker />
+      <DisplayChoice />
+    </div>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
