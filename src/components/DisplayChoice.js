@@ -1,26 +1,35 @@
-import Button from './Button';
+import { useState, useEffect } from "react";
+import Button from "./Button";
 
 const DisplayChoice = () => {
-    return (
-      <div className="choice-div">
-        <div>
-          <h2>Your question was:</h2>
-          <h1>{}</h1>
-        </div>
+  const [question, setQuestion] = useState("");
+  const [answer, setAnswer] = useState("");
 
-        <div>
-          <h2>Selected Option:</h2>
-          <h1>{}</h1>
-        </div>
+  useEffect(() => {
+    const question = localStorage.getItem("question");
+    const answer = localStorage.getItem("randomAnswer");
 
-        <a href="/">
-          <Button
-            color="rgb(65, 146, 27)"
-            text="< Go Again"
-          />
-        </a>
+    setQuestion(question);
+    setAnswer(answer);
+  }, []);
+
+  return (
+    <div className="choice-div">
+      <div>
+        <h2>Your question was:</h2>
+        <h1>{question}</h1>
       </div>
-    );
-}
 
-export default DisplayChoice
+      <div>
+        <h2>Selected Option:</h2>
+        <h1>{answer}</h1>
+      </div>
+
+      <a href="/">
+        <Button color="rgb(65, 146, 27)" text="< Go Again" />
+      </a>
+    </div>
+  );
+};
+
+export default DisplayChoice;

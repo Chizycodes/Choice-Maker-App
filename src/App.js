@@ -3,7 +3,7 @@ import DisplayChoice from './components/DisplayChoice';
 import Header from './components/Header';
 import ChoiceMaker from './components/ChoiceMaker';
 
-const App = ({question, randomAnswer}) => {
+const App = () => {
 
     return (
       <Router>
@@ -20,9 +20,7 @@ const App = ({question, randomAnswer}) => {
           />
           <Route 
           path="/displaychoice" 
-          component= { ()=> (
-          <DisplayChoice question={question} answer={randomAnswer} /> 
-          )}
+          component= {DisplayChoice}
           />
         </div>
       </Router>
