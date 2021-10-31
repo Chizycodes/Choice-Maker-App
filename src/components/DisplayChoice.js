@@ -1,10 +1,25 @@
+import Button from './Button';
+
 const DisplayChoice = () => {
     return (
-      <>
-        <h2>Your Question: </h2>
-        <h2>Selected Option: <span>Option</span></h2>
-        
-      </>
+      <div className="choice-div">
+        <div>
+          <h2>Your question was:</h2>
+          <h1>{}</h1>
+        </div>
+
+        <div>
+          <h2>Selected Option:</h2>
+          <h1>{}</h1>
+        </div>
+
+        <a href="/">
+          <Button
+            color="rgb(65, 146, 27)"
+            text="< Go Again"
+          />
+        </a>
+      </div>
     );
 }
 

@@ -21,10 +21,10 @@ nav {
 .container {
     width: 90%;
     max-width: 500px;
-    margin: 3rem auto;
+    margin: 4rem auto;
     border: 2px solid rgb(7, 7, 32);
     border-radius: 15px;
-    padding: 1rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,3 +99,20 @@ h2 {
     cursor: pointer;
 }
 
+.choice-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.choice-div h1 {
+    color:rgb(65, 146, 27);
+    margin-bottom: 1rem;
+}
+
+.choice-div a {
+    margin-top: 1rem;
+}
