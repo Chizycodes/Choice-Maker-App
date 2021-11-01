@@ -1,17 +1,9 @@
-import { useState, useEffect } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
-const DisplayChoice = () => {
-  const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("");
+const DisplayChoice = ({question, answer}) => {
 
-  useEffect(() => {
-    const question = localStorage.getItem("question");
-    const answer = localStorage.getItem("randomAnswer");
-
-    setQuestion(question);
-    setAnswer(answer);
-  }, []);
+  
 
   return (
     <div className="choice-div">
@@ -25,9 +17,9 @@ const DisplayChoice = () => {
         <h1>{answer}</h1>
       </div>
 
-      <a href="/">
+      <Link to="/">
         <Button color="rgb(65, 146, 27)" text="< Go Again" />
-      </a>
+      </Link>
     </div>
   );
 };
