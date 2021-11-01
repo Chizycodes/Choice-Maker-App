@@ -37,12 +37,9 @@ const App = () => {
   };
 
   const getRandomAnswer = () => {
-
     let optionsArray = Object.values(options[0]);
     let moreOptionsArray = Object.values(moreOptions[0]);
     let combinedArray = [...optionsArray, ...moreOptionsArray];
-
-    console.log(combinedArray);
 
     let realOptions = combinedArray.filter((item) => item !== "");
 
@@ -55,7 +52,7 @@ const App = () => {
     <Router>
       <Header />
       <div className="container">
-        <Route exact path="/" >
+        <Route exact path="/">
           <div className="question-div">
             <h2>
               Enter Your Question<span>*</span>
